@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "project": "encounter_kit",
+  "scenarioId": "optional-robot-encounter",
+  "source": "synthetic",
+  "title": {
+    "en": "An encounter on my terms",
+    "pt": "Um encontro do meu jeito"
+  },
+  "inputSha256": "72bacae53c4fba8ef083b9b85c16957405d4bac725b0821affc82626bf0d1c52",
+  "kind": "encounter",
+  "summary": {
+    "en": "Preview an optional encounter, select how to take part, and keep pause, skip and end available. All events here are fictional.",
+    "pt": "Conheça um encontro opcional, escolha como participar e mantenha disponíveis pausa, pular e encerrar. Todos os eventos aqui são fictícios."
+  },
+  "metrics": [
+    {
+      "label": {
+        "en": "Current state",
+        "pt": "Estado atual"
+      },
+      "value": {
+        "en": "Not started",
+        "pt": "Não iniciado"
+      }
+    },
+    {
+      "label": {
+        "en": "Cards completed",
+        "pt": "Cartões concluídos"
+      },
+      "value": "0/3"
+    },
+    {
+      "label": {
+        "en": "Paused time",
+        "pt": "Tempo em pausa"
+      },
+      "value": "0 s"
+    },
+    {
+      "label": {
+        "en": "Skipped cards",
+        "pt": "Cartões pulados"
+      },
+      "value": 0
+    }
+  ],
+  "sections": [
+    {
+      "title": {
+        "en": "My preferences",
+        "pt": "Minhas preferências"
+      },
+      "columns": [
+        {
+          "en": "Preference",
+          "pt": "Preferência"
+        },
+        {
+          "en": "Choice",
+          "pt": "Escolha"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Distance",
+            "pt": "Distância"
+          },
+          {
+            "en": "I choose a place near the doorway",
+            "pt": "Escolho um lugar perto da porta"
+          }
+        ],
+        [
+          {
+            "en": "Communication",
+            "pt": "Comunicação"
+          },
+          {
+            "en": "Show written choices; speaking is optional",
+            "pt": "Mostre escolhas por escrito; falar é opcional"
+          }
+        ],
+        [
+          {
+            "en": "Quiet place",
+            "pt": "Local tranquilo"
+          },
+          {
+            "en": "The quiet corner remains available",
+            "pt": "O canto tranquilo continua disponível"
+          }
+        ]
+      ]
+    },
+    {
+      "title": {
+        "en": "What happened, without scoring the participant",
+        "pt": "O que aconteceu, sem pontuar o participante"
+      },
+      "columns": [
+        {
+          "en": "Time (s)",
+          "pt": "Tempo (s)"
+        },
+        {
+          "en": "Action",
+          "pt": "Ação"
+        },
+        {
+          "en": "Card",
+          "pt": "Cartão"
+        },
+        {
+          "en": "Choice",
+          "pt": "Escolha"
+        },
+        {
+          "en": "State after action",
+          "pt": "Estado após a ação"
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "state": {
+    "status": "ready",
+    "cardIndex": 0,
+    "choice": null,
+    "legalActions": [
+      "start",
+      "end"
+    ],
+    "completed": [],
+    "skipped": [],
+    "activeMs": 0,
+    "pausedMs": 0
+  },
+  "timeline": [],
+  "journal": {
+    "scenarioId": "optional-robot-encounter",
+    "source": "synthetic",
+    "records": [],
+    "rootHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "cutoffMs": 0,
+    "nowMs": 0,
+    "retentionMs": 86400000,
+    "excluded": 0
+  },
+  "journalInput": {
+    "schemaVersion": 1,
+    "scenarioId": "optional-robot-encounter",
+    "source": "synthetic",
+    "nowMs": 0,
+    "retentionMs": 86400000,
+    "events": []
+  },
+  "visual": {
+    "type": "encounter",
+    "cards": [
+      {
+        "id": "arrive",
+        "title": {
+          "en": "I choose where to stay",
+          "pt": "Eu escolho onde ficar"
+        },
+        "invitation": {
+          "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+          "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+        },
+        "alternatives": [
+          {
+            "en": "Watch from the doorway",
+            "pt": "Observar da porta"
+          },
+          {
+            "en": "Choose a chair farther away",
+            "pt": "Escolher uma cadeira mais distante"
+          },
+          {
+            "en": "Use a picture instead",
+            "pt": "Usar uma imagem no lugar"
+          }
+        ]
+      },
+      {
+        "id": "notice",
+        "title": {
+          "en": "I choose what to notice",
+          "pt": "Eu escolho o que observar"
+        },
+        "invitation": {
+          "en": "I can notice a shape or colour, ask a question, or keep watching quietly.",
+          "pt": "Posso observar uma forma ou cor, fazer uma pergunta ou continuar em silêncio."
+        },
+        "alternatives": [
+          {
+            "en": "Look for a colour",
+            "pt": "Procurar uma cor"
+          },
+          {
+            "en": "Ask one question",
+            "pt": "Fazer uma pergunta"
+          },
+          {
+            "en": "Watch quietly",
+            "pt": "Observar em silêncio"
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "title": {
+          "en": "I choose how to finish",
+          "pt": "Eu escolho como terminar"
+        },
+        "invitation": {
+          "en": "There is no task to pass. I can leave without giving feedback.",
+          "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+        },
+        "alternatives": [
+          {
+            "en": "Finish quietly",
+            "pt": "Terminar em silêncio"
+          },
+          {
+            "en": "Share one thought",
+            "pt": "Compartilhar uma ideia"
+          }
+        ]
+      }
+    ],
+    "currentCard": 0,
+    "status": "ready"
+  },
+  "cards": [
+    {
+      "title": {
+        "en": "I choose where to stay",
+        "pt": "Eu escolho onde ficar"
+      },
+      "steps": [
+        {
+          "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+          "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Watch from the doorway",
+          "pt": "Observar da porta"
+        },
+        {
+          "en": "Choose a chair farther away",
+          "pt": "Escolher uma cadeira mais distante"
+        },
+        {
+          "en": "Use a picture instead",
+          "pt": "Usar uma imagem no lugar"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    },
+    {
+      "title": {
+        "en": "I choose what to notice",
+        "pt": "Eu escolho o que observar"
+      },
+      "steps": [
+        {
+          "en": "I can notice a shape or colour, ask a question, or keep watching quietly.",
+          "pt": "Posso observar uma forma ou cor, fazer uma pergunta ou continuar em silêncio."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Look for a colour",
+          "pt": "Procurar uma cor"
+        },
+        {
+          "en": "Ask one question",
+          "pt": "Fazer uma pergunta"
+        },
+        {
+          "en": "Watch quietly",
+          "pt": "Observar em silêncio"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    },
+    {
+      "title": {
+        "en": "I choose how to finish",
+        "pt": "Eu escolho como terminar"
+      },
+      "steps": [
+        {
+          "en": "There is no task to pass. I can leave without giving feedback.",
+          "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Finish quietly",
+          "pt": "Terminar em silêncio"
+        },
+        {
+          "en": "Share one thought",
+          "pt": "Compartilhar uma ideia"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    }
+  ],
+  "currentInvitation": {
+    "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+    "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+  },
+  "reviewRequired": false
+}

@@ -1,0 +1,272 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scenarioId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,47}$"
+    },
+    "source": {
+      "const": "synthetic"
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240,
+          "pattern": "\\S"
+        },
+        "pt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt"
+      ]
+    },
+    "sessionId": {
+      "type": "string",
+      "pattern": "^s-[a-f0-9]{8}$"
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "distance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            },
+            "pt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt"
+          ]
+        },
+        "communication": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            },
+            "pt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt"
+          ]
+        },
+        "quietPlace": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            },
+            "pt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt"
+          ]
+        }
+      },
+      "required": [
+        "distance",
+        "communication",
+        "quietPlace"
+      ]
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,47}$"
+          },
+          "title": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240,
+                "pattern": "\\S"
+              },
+              "pt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt"
+            ]
+          },
+          "invitation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240,
+                "pattern": "\\S"
+              },
+              "pt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt"
+            ]
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240,
+                  "pattern": "\\S"
+                },
+                "pt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240,
+                  "pattern": "\\S"
+                }
+              },
+              "required": [
+                "en",
+                "pt"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 5
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "invitation",
+          "alternatives"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 12
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "atMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 86400000
+          },
+          "action": {
+            "enum": [
+              "start",
+              "choose",
+              "pause",
+              "resume",
+              "next",
+              "skip",
+              "end"
+            ]
+          },
+          "choice": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          }
+        },
+        "required": [
+          "atMs",
+          "action",
+          "choice"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 500
+    },
+    "nowMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 86400000
+    },
+    "retentionMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 86400000
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "scenarioId",
+    "source",
+    "title",
+    "sessionId",
+    "preferences",
+    "cards",
+    "events",
+    "nowMs",
+    "retentionMs"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic encounter and explicit choices / Encontro sintético e escolhas explícitas"
+}

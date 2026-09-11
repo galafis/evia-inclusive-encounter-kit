@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "project": "encounter_kit",
+  "scenarioId": "encounter-with-a-pause",
+  "source": "synthetic",
+  "title": {
+    "en": "A pause is part of the encounter",
+    "pt": "Uma pausa faz parte do encontro"
+  },
+  "inputSha256": "3aa03d0950edfcd20212e3be80cd32aafe56e6fa9894106e887defc13bd0ccc0",
+  "kind": "encounter",
+  "summary": {
+    "en": "Preview an optional encounter, select how to take part, and keep pause, skip and end available. All events here are fictional.",
+    "pt": "Conheça um encontro opcional, escolha como participar e mantenha disponíveis pausa, pular e encerrar. Todos os eventos aqui são fictícios."
+  },
+  "metrics": [
+    {
+      "label": {
+        "en": "Current state",
+        "pt": "Estado atual"
+      },
+      "value": {
+        "en": "Ended",
+        "pt": "Encerrado"
+      }
+    },
+    {
+      "label": {
+        "en": "Cards completed",
+        "pt": "Cartões concluídos"
+      },
+      "value": "2/3"
+    },
+    {
+      "label": {
+        "en": "Paused time",
+        "pt": "Tempo em pausa"
+      },
+      "value": "30 s"
+    },
+    {
+      "label": {
+        "en": "Skipped cards",
+        "pt": "Cartões pulados"
+      },
+      "value": 1
+    }
+  ],
+  "sections": [
+    {
+      "title": {
+        "en": "My preferences",
+        "pt": "Minhas preferências"
+      },
+      "columns": [
+        {
+          "en": "Preference",
+          "pt": "Preferência"
+        },
+        {
+          "en": "Choice",
+          "pt": "Escolha"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Distance",
+            "pt": "Distância"
+          },
+          {
+            "en": "I choose a place near the doorway",
+            "pt": "Escolho um lugar perto da porta"
+          }
+        ],
+        [
+          {
+            "en": "Communication",
+            "pt": "Comunicação"
+          },
+          {
+            "en": "Show written choices; speaking is optional",
+            "pt": "Mostre escolhas por escrito; falar é opcional"
+          }
+        ],
+        [
+          {
+            "en": "Quiet place",
+            "pt": "Local tranquilo"
+          },
+          {
+            "en": "The quiet corner remains available",
+            "pt": "O canto tranquilo continua disponível"
+          }
+        ]
+      ]
+    },
+    {
+      "title": {
+        "en": "What happened, without scoring the participant",
+        "pt": "O que aconteceu, sem pontuar o participante"
+      },
+      "columns": [
+        {
+          "en": "Time (s)",
+          "pt": "Tempo (s)"
+        },
+        {
+          "en": "Action",
+          "pt": "Ação"
+        },
+        {
+          "en": "Card",
+          "pt": "Cartão"
+        },
+        {
+          "en": "Choice",
+          "pt": "Escolha"
+        },
+        {
+          "en": "State after action",
+          "pt": "Estado após a ação"
+        }
+      ],
+      "rows": [
+        [
+          0.0,
+          {
+            "en": "Start",
+            "pt": "Começar"
+          },
+          "arrive",
+          "—",
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          10.0,
+          {
+            "en": "Choose",
+            "pt": "Escolher"
+          },
+          "arrive",
+          {
+            "en": "Watch from the doorway",
+            "pt": "Observar da porta"
+          },
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          20.0,
+          {
+            "en": "Pause",
+            "pt": "Pausar"
+          },
+          "arrive",
+          "—",
+          {
+            "en": "Paused",
+            "pt": "Pausado"
+          }
+        ],
+        [
+          50.0,
+          {
+            "en": "Resume",
+            "pt": "Retomar"
+          },
+          "arrive",
+          "—",
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          60.0,
+          {
+            "en": "Next card",
+            "pt": "Próximo cartão"
+          },
+          "arrive",
+          "—",
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          70.0,
+          {
+            "en": "Skip card",
+            "pt": "Pular cartão"
+          },
+          "notice",
+          "—",
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          80.0,
+          {
+            "en": "Choose",
+            "pt": "Escolher"
+          },
+          "close",
+          {
+            "en": "Finish quietly",
+            "pt": "Terminar em silêncio"
+          },
+          {
+            "en": "Active",
+            "pt": "Ativo"
+          }
+        ],
+        [
+          90.0,
+          {
+            "en": "Next card",
+            "pt": "Próximo cartão"
+          },
+          "close",
+          "—",
+          {
+            "en": "Ended",
+            "pt": "Encerrado"
+          }
+        ]
+      ]
+    }
+  ],
+  "state": {
+    "status": "ended",
+    "cardIndex": 2,
+    "choice": null,
+    "legalActions": [],
+    "completed": [
+      "arrive",
+      "close"
+    ],
+    "skipped": [
+      "notice"
+    ],
+    "activeMs": 60000,
+    "pausedMs": 30000
+  },
+  "timeline": [
+    {
+      "event": 1,
+      "atMs": 0,
+      "action": "start",
+      "cardId": "arrive",
+      "choice": null,
+      "status": "active"
+    },
+    {
+      "event": 2,
+      "atMs": 10000,
+      "action": "choose",
+      "cardId": "arrive",
+      "choice": {
+        "en": "Watch from the doorway",
+        "pt": "Observar da porta"
+      },
+      "status": "active"
+    },
+    {
+      "event": 3,
+      "atMs": 20000,
+      "action": "pause",
+      "cardId": "arrive",
+      "choice": null,
+      "status": "paused"
+    },
+    {
+      "event": 4,
+      "atMs": 50000,
+      "action": "resume",
+      "cardId": "arrive",
+      "choice": null,
+      "status": "active"
+    },
+    {
+      "event": 5,
+      "atMs": 60000,
+      "action": "next",
+      "cardId": "arrive",
+      "choice": null,
+      "status": "active"
+    },
+    {
+      "event": 6,
+      "atMs": 70000,
+      "action": "skip",
+      "cardId": "notice",
+      "choice": null,
+      "status": "active"
+    },
+    {
+      "event": 7,
+      "atMs": 80000,
+      "action": "choose",
+      "cardId": "close",
+      "choice": {
+        "en": "Finish quietly",
+        "pt": "Terminar em silêncio"
+      },
+      "status": "active"
+    },
+    {
+      "event": 8,
+      "atMs": 90000,
+      "action": "next",
+      "cardId": "close",
+      "choice": null,
+      "status": "ended"
+    }
+  ],
+  "journal": {
+    "scenarioId": "encounter-with-a-pause",
+    "source": "synthetic",
+    "records": [
+      {
+        "sequence": 0,
+        "id": "e-0001",
+        "atMs": 0,
+        "sessionId": "s-00000001",
+        "kind": "session-start",
+        "outcome": "ok",
+        "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hash": "82df5c9d684b739509dae54b8f2f19fe97c3f2cffc21d05e30d29bb6e524468b"
+      },
+      {
+        "sequence": 1,
+        "id": "e-0002",
+        "atMs": 0,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok",
+        "previousHash": "82df5c9d684b739509dae54b8f2f19fe97c3f2cffc21d05e30d29bb6e524468b",
+        "hash": "c052574959feba8056d767c32ea313a2ae627795ad03bf9e9e988c5342035ad5"
+      },
+      {
+        "sequence": 2,
+        "id": "e-0003",
+        "atMs": 10000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok",
+        "previousHash": "c052574959feba8056d767c32ea313a2ae627795ad03bf9e9e988c5342035ad5",
+        "hash": "947236963fe032245ccfe651a56f2aca34705d71d3597b927556219aaa27b57b"
+      },
+      {
+        "sequence": 3,
+        "id": "e-0004",
+        "atMs": 20000,
+        "sessionId": "s-00000001",
+        "kind": "session-pause",
+        "outcome": "interrupted",
+        "previousHash": "947236963fe032245ccfe651a56f2aca34705d71d3597b927556219aaa27b57b",
+        "hash": "31f64a12a779b869c3dc0da9ffb55a76541c081751b80037c3c8e170386d6fde"
+      },
+      {
+        "sequence": 4,
+        "id": "e-0005",
+        "atMs": 50000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok",
+        "previousHash": "31f64a12a779b869c3dc0da9ffb55a76541c081751b80037c3c8e170386d6fde",
+        "hash": "ed3eaf5761880d168318ee7ee00dbefea52f26c01d6edbcec27acd71c6f66393"
+      },
+      {
+        "sequence": 5,
+        "id": "e-0006",
+        "atMs": 60000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok",
+        "previousHash": "ed3eaf5761880d168318ee7ee00dbefea52f26c01d6edbcec27acd71c6f66393",
+        "hash": "378b32d3e355fbc334811a6af2c4ada06cd9b7c9cfcffad45a664748c9fcc78f"
+      },
+      {
+        "sequence": 6,
+        "id": "e-0007",
+        "atMs": 60000,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok",
+        "previousHash": "378b32d3e355fbc334811a6af2c4ada06cd9b7c9cfcffad45a664748c9fcc78f",
+        "hash": "d170b4a49280eb28434ae9fdfb2054c217c768db2fa5765e4fe6ed5fd9ae47b0"
+      },
+      {
+        "sequence": 7,
+        "id": "e-0008",
+        "atMs": 70000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "skipped",
+        "previousHash": "d170b4a49280eb28434ae9fdfb2054c217c768db2fa5765e4fe6ed5fd9ae47b0",
+        "hash": "b293533edd196e351bae7847ccceb628b9479da527df721fa902ade498fddf79"
+      },
+      {
+        "sequence": 8,
+        "id": "e-0009",
+        "atMs": 70000,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok",
+        "previousHash": "b293533edd196e351bae7847ccceb628b9479da527df721fa902ade498fddf79",
+        "hash": "bf25094069a57a0f858a0ddf9857306000bae359b023a1e02d1d22d2db2b1c0f"
+      },
+      {
+        "sequence": 9,
+        "id": "e-0010",
+        "atMs": 80000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok",
+        "previousHash": "bf25094069a57a0f858a0ddf9857306000bae359b023a1e02d1d22d2db2b1c0f",
+        "hash": "39259994b4f9900aa51a78477f5a236a67bf3f5c4227633972bc3156e060ef7e"
+      },
+      {
+        "sequence": 10,
+        "id": "e-0011",
+        "atMs": 90000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok",
+        "previousHash": "39259994b4f9900aa51a78477f5a236a67bf3f5c4227633972bc3156e060ef7e",
+        "hash": "afd424154d8838f58503e86ab034dcd3a0e6c673d0e5ee230104cafdd844dad1"
+      },
+      {
+        "sequence": 11,
+        "id": "e-0012",
+        "atMs": 90000,
+        "sessionId": "s-00000001",
+        "kind": "session-stop",
+        "outcome": "ok",
+        "previousHash": "afd424154d8838f58503e86ab034dcd3a0e6c673d0e5ee230104cafdd844dad1",
+        "hash": "8b20d14f371988ce128372560239dd86e327f9d75ea3cdfac056aabbee3a7507"
+      }
+    ],
+    "rootHash": "8b20d14f371988ce128372560239dd86e327f9d75ea3cdfac056aabbee3a7507",
+    "cutoffMs": 0,
+    "nowMs": 90000,
+    "retentionMs": 86400000,
+    "excluded": 0
+  },
+  "journalInput": {
+    "schemaVersion": 1,
+    "scenarioId": "encounter-with-a-pause",
+    "source": "synthetic",
+    "nowMs": 90000,
+    "retentionMs": 86400000,
+    "events": [
+      {
+        "id": "e-0001",
+        "atMs": 0,
+        "sessionId": "s-00000001",
+        "kind": "session-start",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0002",
+        "atMs": 0,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0003",
+        "atMs": 10000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0004",
+        "atMs": 20000,
+        "sessionId": "s-00000001",
+        "kind": "session-pause",
+        "outcome": "interrupted"
+      },
+      {
+        "id": "e-0005",
+        "atMs": 50000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0006",
+        "atMs": 60000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0007",
+        "atMs": 60000,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0008",
+        "atMs": 70000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "skipped"
+      },
+      {
+        "id": "e-0009",
+        "atMs": 70000,
+        "sessionId": "s-00000001",
+        "kind": "cue-presented",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0010",
+        "atMs": 80000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0011",
+        "atMs": 90000,
+        "sessionId": "s-00000001",
+        "kind": "observation",
+        "outcome": "ok"
+      },
+      {
+        "id": "e-0012",
+        "atMs": 90000,
+        "sessionId": "s-00000001",
+        "kind": "session-stop",
+        "outcome": "ok"
+      }
+    ]
+  },
+  "visual": {
+    "type": "encounter",
+    "cards": [
+      {
+        "id": "arrive",
+        "title": {
+          "en": "I choose where to stay",
+          "pt": "Eu escolho onde ficar"
+        },
+        "invitation": {
+          "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+          "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+        },
+        "alternatives": [
+          {
+            "en": "Watch from the doorway",
+            "pt": "Observar da porta"
+          },
+          {
+            "en": "Choose a chair farther away",
+            "pt": "Escolher uma cadeira mais distante"
+          },
+          {
+            "en": "Use a picture instead",
+            "pt": "Usar uma imagem no lugar"
+          }
+        ]
+      },
+      {
+        "id": "notice",
+        "title": {
+          "en": "I choose what to notice",
+          "pt": "Eu escolho o que observar"
+        },
+        "invitation": {
+          "en": "I can notice a shape or colour, ask a question, or keep watching quietly.",
+          "pt": "Posso observar uma forma ou cor, fazer uma pergunta ou continuar em silêncio."
+        },
+        "alternatives": [
+          {
+            "en": "Look for a colour",
+            "pt": "Procurar uma cor"
+          },
+          {
+            "en": "Ask one question",
+            "pt": "Fazer uma pergunta"
+          },
+          {
+            "en": "Watch quietly",
+            "pt": "Observar em silêncio"
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "title": {
+          "en": "I choose how to finish",
+          "pt": "Eu escolho como terminar"
+        },
+        "invitation": {
+          "en": "There is no task to pass. I can leave without giving feedback.",
+          "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+        },
+        "alternatives": [
+          {
+            "en": "Finish quietly",
+            "pt": "Terminar em silêncio"
+          },
+          {
+            "en": "Share one thought",
+            "pt": "Compartilhar uma ideia"
+          }
+        ]
+      }
+    ],
+    "currentCard": 2,
+    "status": "ended"
+  },
+  "cards": [
+    {
+      "title": {
+        "en": "I choose where to stay",
+        "pt": "Eu escolho onde ficar"
+      },
+      "steps": [
+        {
+          "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+          "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Watch from the doorway",
+          "pt": "Observar da porta"
+        },
+        {
+          "en": "Choose a chair farther away",
+          "pt": "Escolher uma cadeira mais distante"
+        },
+        {
+          "en": "Use a picture instead",
+          "pt": "Usar uma imagem no lugar"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    },
+    {
+      "title": {
+        "en": "I choose what to notice",
+        "pt": "Eu escolho o que observar"
+      },
+      "steps": [
+        {
+          "en": "I can notice a shape or colour, ask a question, or keep watching quietly.",
+          "pt": "Posso observar uma forma ou cor, fazer uma pergunta ou continuar em silêncio."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Look for a colour",
+          "pt": "Procurar uma cor"
+        },
+        {
+          "en": "Ask one question",
+          "pt": "Fazer uma pergunta"
+        },
+        {
+          "en": "Watch quietly",
+          "pt": "Observar em silêncio"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    },
+    {
+      "title": {
+        "en": "I choose how to finish",
+        "pt": "Eu escolho como terminar"
+      },
+      "steps": [
+        {
+          "en": "There is no task to pass. I can leave without giving feedback.",
+          "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+        }
+      ],
+      "choices": [
+        {
+          "en": "Finish quietly",
+          "pt": "Terminar em silêncio"
+        },
+        {
+          "en": "Share one thought",
+          "pt": "Compartilhar uma ideia"
+        }
+      ],
+      "footer": {
+        "en": "You may pause, skip or end. No approach or touch is required.",
+        "pt": "Você pode pausar, pular ou encerrar. Não é preciso se aproximar nem tocar."
+      }
+    }
+  ],
+  "currentInvitation": {
+    "en": "There is no task to pass. I can leave without giving feedback.",
+    "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+  },
+  "reviewRequired": false
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "encounter-with-a-pause",
+  "source": "synthetic",
+  "title": {
+    "en": "A pause is part of the encounter",
+    "pt": "Uma pausa faz parte do encontro"
+  },
+  "sessionId": "s-00000001",
+  "preferences": {
+    "distance": {
+      "en": "I choose a place near the doorway",
+      "pt": "Escolho um lugar perto da porta"
+    },
+    "communication": {
+      "en": "Show written choices; speaking is optional",
+      "pt": "Mostre escolhas por escrito; falar é opcional"
+    },
+    "quietPlace": {
+      "en": "The quiet corner remains available",
+      "pt": "O canto tranquilo continua disponível"
+    }
+  },
+  "cards": [
+    {
+      "id": "arrive",
+      "title": {
+        "en": "I choose where to stay",
+        "pt": "Eu escolho onde ficar"
+      },
+      "invitation": {
+        "en": "The robot is stationary. I can choose my distance or decline this encounter.",
+        "pt": "O robô está parado. Posso escolher minha distância ou recusar este encontro."
+      },
+      "alternatives": [
+        {
+          "en": "Watch from the doorway",
+          "pt": "Observar da porta"
+        },
+        {
+          "en": "Choose a chair farther away",
+          "pt": "Escolher uma cadeira mais distante"
+        },
+        {
+          "en": "Use a picture instead",
+          "pt": "Usar uma imagem no lugar"
+        }
+      ]
+    },
+    {
+      "id": "notice",
+      "title": {
+        "en": "I choose what to notice",
+        "pt": "Eu escolho o que observar"
+      },
+      "invitation": {
+        "en": "I can notice a shape or colour, ask a question, or keep watching quietly.",
+        "pt": "Posso observar uma forma ou cor, fazer uma pergunta ou continuar em silêncio."
+      },
+      "alternatives": [
+        {
+          "en": "Look for a colour",
+          "pt": "Procurar uma cor"
+        },
+        {
+          "en": "Ask one question",
+          "pt": "Fazer uma pergunta"
+        },
+        {
+          "en": "Watch quietly",
+          "pt": "Observar em silêncio"
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "title": {
+        "en": "I choose how to finish",
+        "pt": "Eu escolho como terminar"
+      },
+      "invitation": {
+        "en": "There is no task to pass. I can leave without giving feedback.",
+        "pt": "Não há tarefa para passar. Posso sair sem dar uma opinião."
+      },
+      "alternatives": [
+        {
+          "en": "Finish quietly",
+          "pt": "Terminar em silêncio"
+        },
+        {
+          "en": "Share one thought",
+          "pt": "Compartilhar uma ideia"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "atMs": 0,
+      "action": "start",
+      "choice": 0
+    },
+    {
+      "atMs": 10000,
+      "action": "choose",
+      "choice": 0
+    },
+    {
+      "atMs": 20000,
+      "action": "pause",
+      "choice": 0
+    },
+    {
+      "atMs": 50000,
+      "action": "resume",
+      "choice": 0
+    },
+    {
+      "atMs": 60000,
+      "action": "next",
+      "choice": 0
+    },
+    {
+      "atMs": 70000,
+      "action": "skip",
+      "choice": 0
+    },
+    {
+      "atMs": 80000,
+      "action": "choose",
+      "choice": 0
+    },
+    {
+      "atMs": 90000,
+      "action": "next",
+      "choice": 0
+    }
+  ],
+  "nowMs": 90000,
+  "retentionMs": 86400000
+}
