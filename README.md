@@ -1,11 +1,31 @@
 # Évia · My Encounter / Meu Encontro
 
-[English](#english) · [Português](#portugues) · [Explore the examples / Explorar exemplos](https://galafis.github.io/evia-inclusive-encounter-kit/) · [Demo guide / Guia de demonstração](docs/DEMO.md)
+**Optional encounters · Encontros opcionais**
+
+<p align="center"><img src="assets/project-overview.svg" width="960" alt="Workflow illustration: Invitation cards → Optional choices → Minimal journal"></p>
 
 [![Checks](https://github.com/galafis/evia-inclusive-encounter-kit/actions/workflows/checks.yml/badge.svg)](https://github.com/galafis/evia-inclusive-encounter-kit/actions/workflows/checks.yml)
-![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-306998) ![License MIT](https://img.shields.io/badge/license-MIT-136750)
+[English](#english) · [Português](#portugues) · [Guided tour / Visita guiada](docs/SHOWCASE.md) · [Validation / Validação](docs/VALIDATION.md)
 
-[![Workbench example / Exemplo da bancada](assets/workbench.png)](https://galafis.github.io/evia-inclusive-encounter-kit/)
+> **EN:** What does the record show when a person pauses or declines?<br>
+> **PT:** O que o registro mostra quando alguém pausa ou recusa?
+
+## Start here · Comece aqui
+
+| Goal · Objetivo | Where to go · Por onde começar |
+| --- | --- |
+| Understand a real example · Entender um exemplo concreto | [Walkthrough / Roteiro](docs/DEMO.md) |
+| Reproduce and compare · Reproduzir e comparar | [Evidence tour / Visita às evidências](docs/SHOWCASE.md) |
+| Inspect the checks · Inspecionar as verificações | [Validation record / Registro de validação](docs/VALIDATION.md) · [CI](https://github.com/galafis/evia-inclusive-encounter-kit/actions/workflows/checks.yml) |
+| Explore in the browser · Explorar no navegador | [Public demonstration / Demonstração pública](https://galafis.github.io/evia-inclusive-encounter-kit/) |
+
+**Example result · Resultado do exemplo:** The unstarted example remains unstarted regardless of elapsed time. In the paused example, a fictional 90-second encounter contains 30 seconds paused and 60 seconds active, with two cards completed and one skipped. The declined example ends before starting, with no active time. None of these choices is converted into a performance score.
+
+**Try a comparison · Experimente uma comparação**<br>
+**EN:** Compare unstarted, paused and declined examples; inspect active time without assigning a participation score.<br>
+**PT:** Compare os exemplos não iniciado, pausado e recusado; inspecione tempo ativo sem pontuar participação.
+
+[![Existing application preview / Prévia existente da aplicação](assets/workbench.png)](https://galafis.github.io/evia-inclusive-encounter-kit/)
 
 <a id="english"></a>
 ## English
